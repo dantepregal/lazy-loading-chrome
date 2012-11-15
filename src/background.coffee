@@ -1,4 +1,4 @@
-urlBlank = 'http://localhost/blank.html'#es posible leer el manifiesto pero asi me ahorro una request
+urlBlank = 'https://lazy-loading-chrome.googlecode.com/git/server/blank.html'#es posible leer el manifiesto pero asi me ahorro una request
 parkTab = (tab)->
 	if !tab.active
 		if tab.url.substring(0, tab.url.indexOf '#') != urlBlank

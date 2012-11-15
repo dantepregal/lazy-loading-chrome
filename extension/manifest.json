@@ -23,7 +23,7 @@
 		"tabs"
 	],
 	"content_scripts": [{
-		"matches": ["http://localhost/blank.html*"],
+		"matches": ["https://lazy-loading-chrome.googlecode.com/git/server/blank.html*"],
 		"js": ["inject_blank.js"]
 	}]
 }
