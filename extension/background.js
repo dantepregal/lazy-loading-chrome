@@ -2,7 +2,7 @@
 (function() {
   var park, parkTab, urlBlank;
 
-  urlBlank = 'http://localhost/blank.html';
+  urlBlank = 'https://lazy-loading-chrome.googlecode.com/git/server/blank.html';
 
   parkTab = function(tab) {
     var url;
