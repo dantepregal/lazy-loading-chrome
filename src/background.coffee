@@ -7,7 +7,15 @@ parkTab = (tab)->
 				url += '&icon=' + encodeURIComponent tab.favIconUrl
 			chrome.tabs.update tab.id, {'url': url, 'selected': false}
 
+block = (details) ->
+		return {cancel : true}
+
+no_blocked = true
+
 park = (tab) ->
+	if no_blocked
+		chrome.webRequest.onBeforeRequest.addListener block, {urls: [urlBlank+'*']}, ["blocking"]
+		no_blocked = false
 	chrome.windows.get tab.windowId, populate: true, (window)->
 		for t in window.tabs
 			parkTab t

@@ -13,6 +13,9 @@ chrome.extension.onMessage.addListener (message, sender, sendResponse) ->
 	if message['do'] == 'load'
 		history.back()
 
+window.onload = ->
+	chrome.extension.sendMessage 'ok'
+
 title = getParam 'title'
 if title
 	document.title = title

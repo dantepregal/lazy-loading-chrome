@@ -20,7 +20,10 @@
 		"scripts": ["background.js"]
 	},
 	"permissions": [
-		"tabs"
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"https://lazy-loading-chrome.googlecode.com/git/server/blank.html*"
 	],
 	"content_scripts": [{
 		"matches": ["https://lazy-loading-chrome.googlecode.com/git/server/blank.html*"],
