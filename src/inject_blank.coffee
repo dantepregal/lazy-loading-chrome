@@ -13,10 +13,6 @@ chrome.extension.onMessage.addListener (message, sender, sendResponse) ->
 	if message['do'] == 'load'
 		history.back()
 
-window.onload = ->
-	chrome.extension.sendMessage 'ok'
-	document.getElementById('go-back-link').style.display = 'none'
-
 title = getParam 'title'
 if title
 	document.title = title
@@ -25,4 +21,4 @@ favicon = getParam 'icon'
 if favicon
 	document.getElementById('icon').href = favicon
 
-console.info(favicon)
+document.getElementById('go-back-link').style.display = 'none'

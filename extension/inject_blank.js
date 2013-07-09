@@ -25,11 +25,6 @@
     }
   });
 
-  window.onload = function() {
-    chrome.extension.sendMessage('ok');
-    return document.getElementById('go-back-link').style.display = 'none';
-  };
-
   title = getParam('title');
 
   if (title) {
@@ -42,6 +37,6 @@
     document.getElementById('icon').href = favicon;
   }
 
-  console.info(favicon);
+  document.getElementById('go-back-link').style.display = 'none';
 
 }).call(this);
