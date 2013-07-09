@@ -1,6 +1,6 @@
 {
 	"name": "Lazy Loading",
-	"version": "1.0",
+	"version": "1.1",
 	"manifest_version": 2,
 	"description": "Add lazy loading to the tabs restore built in functionality of Chrome.",
 	"icons": {
